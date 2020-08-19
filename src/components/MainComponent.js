@@ -10,7 +10,7 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { actions } from 'react-redux-form';
 import { postComment, postFeedback, fetchDishes, fetchComments, fetchPromos, fetchLeaders } from '../redux/ActionCreators';
-import { TransitionGroup, CSSTransition, Transition } from 'react-transition-group';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 
 const mapStateToProps = state => {
@@ -35,11 +35,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class Main extends Component {
-
-  constructor(props) {
-    super(props);
-    
-  }
 
   componentDidMount() {
     this.props.fetchDishes();
